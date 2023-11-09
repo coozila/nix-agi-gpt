@@ -1,11 +1,11 @@
-# nix-auto-gpt
+# nix-agi-gpt
 
-As Alpha supports [direnv](https://github.com/nix-community/nix-direnv), upon cloning [Alpha](https://github.com/coozila/Alpha) repository and entering directory, `direnv` will request permission once to automatically load dependencies. To grant permission, enter: `direnv allow`
+As Alpha supports [direnv](https://github.com/nix-community/nix-direnv), upon cloning [AGI-GPT](https://github.com/coozila/agi-gpt) repository and entering directory, `direnv` will request permission once to automatically load dependencies. To grant permission, enter: `direnv allow`
 
 
 To manually load dependencies without `direnv`, run:
 
-> nix develop github:coozila/nix-alpha
+> nix develop github:coozila/nix-agi-gpt
 
 ## License
 
