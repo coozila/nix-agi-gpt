@@ -7,7 +7,7 @@ let pythonPackages = p: with p;
   [
     abstract-singleton
     openapi-python-client
-    alpha-plugin-template
+    agi-gpt-plugin-template
     httpcore
     httpx
     distro
@@ -57,7 +57,7 @@ let pythonPackages = p: with p;
 in
 
 mkShellNoCC {
-  pname = "alpha";
+  pname = "agi-gpt";
   version = "0.0.1"; # bogus development version
 
   buildInputs = [
@@ -65,7 +65,7 @@ mkShellNoCC {
   ];
 
   shellHook = ''
-    tput setaf 2; echo "=== Alpha Flake Environment ==="; tput sgr0; echo
+    tput setaf 2; echo "=== AGI-GPT Flake Environment ==="; tput sgr0; echo
     if ! test -e ".env"; then
       tput setaf 3; echo "ATTENTION:"; tput sgr0; tput setaf 5
       echo '- File ".env" is missing:'
@@ -93,7 +93,7 @@ mkShellNoCC {
       checkKey "PINECONE_ENV"     "your-pinecone-region"  "Update \".env\" file with API Keys environment value obtained from: https://www.pinecone.io/"
       checkKey "OPENAI_API_KEY"   "your-openai-api-key"   "Update \".env\" file with OpenAI API key obtained from: https://platform.openai.com/account/api-keys"
     fi
-    tput setaf 13; echo "  - To run Auto-GPT, execute:"; echo
-    echo "    python -m autogpt"; tput sgr0; echo
+    tput setaf 13; echo "  - To run agi-gpt, execute:"; echo
+    echo "    python -m agigpt"; tput sgr0; echo
   '';
 }
